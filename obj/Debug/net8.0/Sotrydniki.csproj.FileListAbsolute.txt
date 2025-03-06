@@ -148,3 +148,4 @@ C:\Users\Class_Student\Desktop\Sotrydniki\bin\Debug\net8.0\Mono.TextTemplating.d
 C:\Users\Class_Student\Desktop\Sotrydniki\bin\Debug\net8.0\Npgsql.dll
 C:\Users\Class_Student\Desktop\Sotrydniki\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 C:\Users\Class_Student\Desktop\Sotrydniki\bin\Debug\net8.0\System.CodeDom.dll
+C:\Users\Class_Student\Desktop\Sotrydniki\obj\Debug\net8.0\Sotrydniki.sourcelink.json

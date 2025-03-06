@@ -2,16 +2,16 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="700" d:DesignHeight="450"
+        mc:Ignorable="d" d:DesignWidth="1200" d:DesignHeight="490"
         x:Class="Sotrydniki.MainWindow"
 		x:CompileBindings="False"
-		Width="700" Height="450"
+		Width="1200" Height="490"
         Title="Sotrydniki">
 	<StackPanel>
 		<TextBlock Margin="0,10,0,0" FontSize="24" HorizontalAlignment="Center">Список сотрудников</TextBlock>
 		<StackPanel Orientation="Horizontal">
-			<StackPanel Width="350">
-				<ListBox SelectionChanged="ListBox_SelectionChanged" Name="ListBoxdDol" Margin="0,20,0,0" Width="300" Height="350">
+			<StackPanel Width="550">
+				<ListBox SelectionChanged="ListBox_SelectionChanged" Name="ListBoxdDol" Margin="0,20,0,0" Width="520" Height="350">
 					<ListBox.ItemTemplate>
 						<DataTemplate>
 							<TextBlock Text="{Binding Name}"></TextBlock>
@@ -19,14 +19,26 @@
 					</ListBox.ItemTemplate>
 				</ListBox>
 			</StackPanel>
-			<StackPanel Width="350">
-				<ListBox Name="ListBoxSort" Margin="0,20,0,0" Width="330" Height="350">
+			<StackPanel Width="650">
+				<ListBox Name="ListBoxSort" Margin="0,20,0,0" Width="630" Height="350">
 					<ListBox.ItemTemplate>
 						<DataTemplate>
 							<StackPanel>
 								<StackPanel Orientation="Horizontal">
-									<TextBlock Margin="10,10,0,0"></TextBlock>
-									<TextBlock Text="{Binding Positions}" Margin="10,10,0,0"></TextBlock>
+									<ListBox ItemsSource="{Binding Departments}">
+										<ListBox.ItemTemplate>
+											<DataTemplate>
+												<TextBlock Text="{Binding Name}"></TextBlock>
+											</DataTemplate>
+										</ListBox.ItemTemplate>
+									</ListBox>
+									<ListBox ItemsSource="{Binding Positions}">
+										<ListBox.ItemTemplate>
+											<DataTemplate>
+												<TextBlock Text="{Binding Name}"></TextBlock>
+											</DataTemplate>
+										</ListBox.ItemTemplate>
+									</ListBox>
 								</StackPanel>
 								<TextBlock Text="{Binding Name}"></TextBlock>
 								<StackPanel Orientation="Horizontal">
@@ -40,5 +52,6 @@
 				</ListBox>
 			</StackPanel>
 		</StackPanel>
+		<Button Margin="0,20,60,0" HorizontalAlignment="Right">Добавить</Button>
 	</StackPanel>
 </Window>

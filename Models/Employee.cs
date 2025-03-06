@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace Sotrydniki.Models;
 
@@ -26,23 +25,21 @@ public partial class Employee
 
     public virtual ICollection<Employeeabsence> EmployeeabsenceReplacements { get; set; } = new List<Employeeabsence>();
 
-    public virtual ICollection<Employeeposition> EmployeepositionAssistants { get; set; } = new List<Employeeposition>();
-
-    public virtual ICollection<Employeeposition> EmployeepositionEmployees { get; set; } = new List<Employeeposition>();
-
-    public string Positions
-    {
-        get
-        {
-            return string.Join(' ', EmployeepositionEmployees.Select(p => p.Position).Select(p => p.Name));
-        }
-    }
-
-    public virtual ICollection<Employeeposition> EmployeepositionSupervisors { get; set; } = new List<Employeeposition>();
-
     public virtual ICollection<Trainingmaterial> Trainingmaterials { get; set; } = new List<Trainingmaterial>();
 
+    public virtual ICollection<Employee> Assistants { get; set; } = new List<Employee>();
+
+    public virtual ICollection<Department> Departments { get; set; } = new List<Department>();
+
+    public virtual ICollection<Employee> Employees { get; set; } = new List<Employee>();
+
+    public virtual ICollection<Employee> EmployeesNavigation { get; set; } = new List<Employee>();
+
     public virtual ICollection<Event> Events { get; set; } = new List<Event>();
+
+    public virtual ICollection<Position> Positions { get; set; } = new List<Position>();
+
+    public virtual ICollection<Employee> Supervisors { get; set; } = new List<Employee>();
 
     public virtual ICollection<Training> Training { get; set; } = new List<Training>();
 }

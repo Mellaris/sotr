@@ -9,5 +9,5 @@ public partial class Position
 
     public string Name { get; set; } = null!;
 
-    public virtual ICollection<Employeeposition> Employeepositions { get; set; } = new List<Employeeposition>();
+    public virtual ICollection<Employee> Employees { get; set; } = new List<Employee>();
 }

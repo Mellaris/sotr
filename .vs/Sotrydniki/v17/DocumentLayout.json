@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Class_Student\\Desktop\\Sotrydniki\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EF2FCA50-D770-4697-BE2D-8982E0F5FE87}|Sotrydniki.csproj|c:\\users\\class_student\\desktop\\sotrydniki\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF2FCA50-D770-4697-BE2D-8982E0F5FE87}|Sotrydniki.csproj|solutionrelative:mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF2FCA50-D770-4697-BE2D-8982E0F5FE87}|Sotrydniki.csproj|c:\\users\\class_student\\desktop\\sotrydniki\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF2FCA50-D770-4697-BE2D-8982E0F5FE87}|Sotrydniki.csproj|solutionrelative:models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EF2FCA50-D770-4697-BE2D-8982E0F5FE87}|Sotrydniki.csproj|c:\\users\\class_student\\desktop\\sotrydniki\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
       "RelativeMoniker": "D:0:0:{EF2FCA50-D770-4697-BE2D-8982E0F5FE87}|Sotrydniki.csproj|solutionrelative:mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF2FCA50-D770-4697-BE2D-8982E0F5FE87}|Sotrydniki.csproj|c:\\users\\class_student\\desktop\\sotrydniki\\models\\employeeposition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF2FCA50-D770-4697-BE2D-8982E0F5FE87}|Sotrydniki.csproj|solutionrelative:models\\employeeposition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EF2FCA50-D770-4697-BE2D-8982E0F5FE87}|Sotrydniki.csproj|c:\\users\\class_student\\desktop\\sotrydniki\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF2FCA50-D770-4697-BE2D-8982E0F5FE87}|Sotrydniki.csproj|solutionrelative:mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF2FCA50-D770-4697-BE2D-8982E0F5FE87}|Sotrydniki.csproj|c:\\users\\class_student\\desktop\\sotrydniki\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF2FCA50-D770-4697-BE2D-8982E0F5FE87}|Sotrydniki.csproj|solutionrelative:models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF2FCA50-D770-4697-BE2D-8982E0F5FE87}|Sotrydniki.csproj|c:\\users\\class_student\\desktop\\sotrydniki\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF2FCA50-D770-4697-BE2D-8982E0F5FE87}|Sotrydniki.csproj|solutionrelative:models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EF2FCA50-D770-4697-BE2D-8982E0F5FE87}|Sotrydniki.csproj|c:\\users\\class_student\\desktop\\sotrydniki\\models\\position.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,8 +27,12 @@
       "RelativeMoniker": "D:0:0:{EF2FCA50-D770-4697-BE2D-8982E0F5FE87}|Sotrydniki.csproj|solutionrelative:helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF2FCA50-D770-4697-BE2D-8982E0F5FE87}|Sotrydniki.csproj|c:\\users\\class_student\\desktop\\sotrydniki\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF2FCA50-D770-4697-BE2D-8982E0F5FE87}|Sotrydniki.csproj|solutionrelative:models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EF2FCA50-D770-4697-BE2D-8982E0F5FE87}|Sotrydniki.csproj|c:\\users\\class_student\\desktop\\sotrydniki\\models\\employeeabsence.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF2FCA50-D770-4697-BE2D-8982E0F5FE87}|Sotrydniki.csproj|solutionrelative:models\\employeeabsence.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Class_Student\\Desktop\\Sotrydniki\\Models\\Employeeposition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\Employeeposition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -40,6 +44,19 @@
           "DockedWidth": 200,
           "SelectedChildIndex": 6,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Employeeabsence.cs",
+              "DocumentMoniker": "C:\\Users\\Class_Student\\Desktop\\Sotrydniki\\Models\\Employeeabsence.cs",
+              "RelativeDocumentMoniker": "Models\\Employeeabsence.cs",
+              "ToolTip": "C:\\Users\\Class_Student\\Desktop\\Sotrydniki\\Models\\Employeeabsence.cs",
+              "RelativeToolTip": "Models\\Employeeabsence.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T07:18:42.651Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 4,
@@ -55,7 +72,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "Employeeposition.cs",
               "DocumentMoniker": "C:\\Users\\Class_Student\\Desktop\\Sotrydniki\\Models\\Employeeposition.cs",
               "RelativeDocumentMoniker": "Models\\Employeeposition.cs",
@@ -63,18 +80,17 @@
               "RelativeToolTip": "Models\\Employeeposition.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T13:21:37.12Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-04T13:21:37.12Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Employee.cs",
               "DocumentMoniker": "C:\\Users\\Class_Student\\Desktop\\Sotrydniki\\Models\\Employee.cs",
               "RelativeDocumentMoniker": "Models\\Employee.cs",
               "ToolTip": "C:\\Users\\Class_Student\\Desktop\\Sotrydniki\\Models\\Employee.cs",
               "RelativeToolTip": "Models\\Employee.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAowBwAAAA6AAAA",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAwwB8AAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-04T13:09:09.921Z",
               "EditorCaption": ""
@@ -87,14 +103,14 @@
               "RelativeDocumentMoniker": "Helper.cs",
               "ToolTip": "C:\\Users\\Class_Student\\Desktop\\Sotrydniki\\Helper.cs",
               "RelativeToolTip": "Helper.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABQAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-04T12:28:53.854Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "Department.cs",
               "DocumentMoniker": "C:\\Users\\Class_Student\\Desktop\\Sotrydniki\\Models\\Department.cs",
               "RelativeDocumentMoniker": "Models\\Department.cs",
@@ -107,7 +123,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "MainWindow.axaml",
               "DocumentMoniker": "C:\\Users\\Class_Student\\Desktop\\Sotrydniki\\MainWindow.axaml",
               "RelativeDocumentMoniker": "MainWindow.axaml",
@@ -119,13 +135,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MainWindow.axaml.cs",
               "DocumentMoniker": "C:\\Users\\Class_Student\\Desktop\\Sotrydniki\\MainWindow.axaml.cs",
               "RelativeDocumentMoniker": "MainWindow.axaml.cs",
               "ToolTip": "C:\\Users\\Class_Student\\Desktop\\Sotrydniki\\MainWindow.axaml.cs",
               "RelativeToolTip": "MainWindow.axaml.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAQwCUAAAAYAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-04T12:24:29.132Z",
               "EditorCaption": ""

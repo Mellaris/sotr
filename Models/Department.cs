@@ -11,9 +11,9 @@ public partial class Department
 
     public string? Description { get; set; }
 
-    public virtual ICollection<Employeeposition> Employeepositions { get; set; } = new List<Employeeposition>();
-
     public virtual ICollection<Department> Childdepts { get; set; } = new List<Department>();
+
+    public virtual ICollection<Employee> Employees { get; set; } = new List<Employee>();
 
     public virtual ICollection<Department> Parentdepts { get; set; } = new List<Department>();
 }

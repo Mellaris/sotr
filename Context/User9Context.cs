@@ -28,8 +28,6 @@ public partial class User9Context : DbContext
 
     public virtual DbSet<Employeeabsence> Employeeabsences { get; set; }
 
-    public virtual DbSet<Employeeposition> Employeepositions { get; set; }
-
     public virtual DbSet<Event> Events { get; set; }
 
     public virtual DbSet<Firedemployee> Firedemployees { get; set; }
@@ -164,6 +162,109 @@ public partial class User9Context : DbContext
                 .HasMaxLength(20)
                 .HasColumnName("workphone");
 
+            entity.HasMany(d => d.Assistants).WithMany(p => p.Employees)
+                .UsingEntity<Dictionary<string, object>>(
+                    "EmployeeAssistant",
+                    r => r.HasOne<Employee>().WithMany()
+                        .HasForeignKey("AssistantId")
+                        .HasConstraintName("employee_assistant_employees_fk_1"),
+                    l => l.HasOne<Employee>().WithMany()
+                        .HasForeignKey("EmployeeId")
+                        .HasConstraintName("employee_assistant_employees_fk"),
+                    j =>
+                    {
+                        j.HasKey("EmployeeId", "AssistantId").HasName("employee_assistant_pk");
+                        j.ToTable("employee_assistant", "Sotrydniki");
+                        j.IndexerProperty<int>("EmployeeId").HasColumnName("employee_id");
+                        j.IndexerProperty<int>("AssistantId").HasColumnName("assistant_id");
+                    });
+
+            entity.HasMany(d => d.Departments).WithMany(p => p.Employees)
+                .UsingEntity<Dictionary<string, object>>(
+                    "EmployeeDepartment",
+                    r => r.HasOne<Department>().WithMany()
+                        .HasForeignKey("DepartmentId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .HasConstraintName("employee_department_departments_fk"),
+                    l => l.HasOne<Employee>().WithMany()
+                        .HasForeignKey("EmployeeId")
+                        .HasConstraintName("employee_department_employees_fk"),
+                    j =>
+                    {
+                        j.HasKey("EmployeeId", "DepartmentId").HasName("employee_department_pk");
+                        j.ToTable("employee_department", "Sotrydniki");
+                        j.IndexerProperty<int>("EmployeeId").HasColumnName("employee_id");
+                        j.IndexerProperty<int>("DepartmentId").HasColumnName("department_id");
+                    });
+
+            entity.HasMany(d => d.Employees).WithMany(p => p.Assistants)
+                .UsingEntity<Dictionary<string, object>>(
+                    "EmployeeAssistant",
+                    r => r.HasOne<Employee>().WithMany()
+                        .HasForeignKey("EmployeeId")
+                        .HasConstraintName("employee_assistant_employees_fk"),
+                    l => l.HasOne<Employee>().WithMany()
+                        .HasForeignKey("AssistantId")
+                        .HasConstraintName("employee_assistant_employees_fk_1"),
+                    j =>
+                    {
+                        j.HasKey("EmployeeId", "AssistantId").HasName("employee_assistant_pk");
+                        j.ToTable("employee_assistant", "Sotrydniki");
+                        j.IndexerProperty<int>("EmployeeId").HasColumnName("employee_id");
+                        j.IndexerProperty<int>("AssistantId").HasColumnName("assistant_id");
+                    });
+
+            entity.HasMany(d => d.EmployeesNavigation).WithMany(p => p.Supervisors)
+                .UsingEntity<Dictionary<string, object>>(
+                    "EmployeeSupervisor",
+                    r => r.HasOne<Employee>().WithMany()
+                        .HasForeignKey("EmployeeId")
+                        .HasConstraintName("employee_supervisor_employees_fk"),
+                    l => l.HasOne<Employee>().WithMany()
+                        .HasForeignKey("SupervisorId")
+                        .HasConstraintName("employee_supervisor_employees_fk_1"),
+                    j =>
+                    {
+                        j.HasKey("EmployeeId", "SupervisorId").HasName("employee_supervisor_pk");
+                        j.ToTable("employee_supervisor", "Sotrydniki");
+                        j.IndexerProperty<int>("EmployeeId").HasColumnName("employee_id");
+                        j.IndexerProperty<int>("SupervisorId").HasColumnName("supervisor_id");
+                    });
+
+            entity.HasMany(d => d.Positions).WithMany(p => p.Employees)
+                .UsingEntity<Dictionary<string, object>>(
+                    "Employeeposition",
+                    r => r.HasOne<Position>().WithMany()
+                        .HasForeignKey("Positionid")
+                        .HasConstraintName("employeepositions_positionid_fkey"),
+                    l => l.HasOne<Employee>().WithMany()
+                        .HasForeignKey("Employeeid")
+                        .HasConstraintName("employeepositions_employeeid_fkey"),
+                    j =>
+                    {
+                        j.HasKey("Employeeid", "Positionid").HasName("employeepositions_pkey");
+                        j.ToTable("employeepositions", "Sotrydniki");
+                        j.IndexerProperty<int>("Employeeid").HasColumnName("employeeid");
+                        j.IndexerProperty<int>("Positionid").HasColumnName("positionid");
+                    });
+
+            entity.HasMany(d => d.Supervisors).WithMany(p => p.EmployeesNavigation)
+                .UsingEntity<Dictionary<string, object>>(
+                    "EmployeeSupervisor",
+                    r => r.HasOne<Employee>().WithMany()
+                        .HasForeignKey("SupervisorId")
+                        .HasConstraintName("employee_supervisor_employees_fk_1"),
+                    l => l.HasOne<Employee>().WithMany()
+                        .HasForeignKey("EmployeeId")
+                        .HasConstraintName("employee_supervisor_employees_fk"),
+                    j =>
+                    {
+                        j.HasKey("EmployeeId", "SupervisorId").HasName("employee_supervisor_pk");
+                        j.ToTable("employee_supervisor", "Sotrydniki");
+                        j.IndexerProperty<int>("EmployeeId").HasColumnName("employee_id");
+                        j.IndexerProperty<int>("SupervisorId").HasColumnName("supervisor_id");
+                    });
+
             entity.HasMany(d => d.Training).WithMany(p => p.Employees)
                 .UsingEntity<Dictionary<string, object>>(
                     "Employeetraining",
@@ -209,42 +310,6 @@ public partial class User9Context : DbContext
                 .HasForeignKey(d => d.Replacementid)
                 .OnDelete(DeleteBehavior.SetNull)
                 .HasConstraintName("employeeabsences_replacementid_fkey");
-        });
-
-        modelBuilder.Entity<Employeeposition>(entity =>
-        {
-            entity.HasKey(e => new { e.Employeeid, e.Positionid }).HasName("employeepositions_pkey");
-
-            entity.ToTable("employeepositions", "Sotrydniki");
-
-            entity.Property(e => e.Employeeid).HasColumnName("employeeid");
-            entity.Property(e => e.Positionid).HasColumnName("positionid");
-            entity.Property(e => e.Assistantid).HasColumnName("assistantid");
-            entity.Property(e => e.Departmentid).HasColumnName("departmentid");
-            entity.Property(e => e.Supervisorid).HasColumnName("supervisorid");
-
-            entity.HasOne(d => d.Assistant).WithMany(p => p.EmployeepositionAssistants)
-                .HasForeignKey(d => d.Assistantid)
-                .OnDelete(DeleteBehavior.SetNull)
-                .HasConstraintName("employeepositions_assistantid_fkey");
-
-            entity.HasOne(d => d.Department).WithMany(p => p.Employeepositions)
-                .HasForeignKey(d => d.Departmentid)
-                .OnDelete(DeleteBehavior.Cascade)
-                .HasConstraintName("employeepositions_departmentid_fkey");
-
-            entity.HasOne(d => d.Employee).WithMany(p => p.EmployeepositionEmployees)
-                .HasForeignKey(d => d.Employeeid)
-                .HasConstraintName("employeepositions_employeeid_fkey");
-
-            entity.HasOne(d => d.Position).WithMany(p => p.Employeepositions)
-                .HasForeignKey(d => d.Positionid)
-                .HasConstraintName("employeepositions_positionid_fkey");
-
-            entity.HasOne(d => d.Supervisor).WithMany(p => p.EmployeepositionSupervisors)
-                .HasForeignKey(d => d.Supervisorid)
-                .OnDelete(DeleteBehavior.SetNull)
-                .HasConstraintName("employeepositions_supervisorid_fkey");
         });
 
         modelBuilder.Entity<Event>(entity =>
