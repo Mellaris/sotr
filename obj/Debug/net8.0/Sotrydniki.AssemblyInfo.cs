@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Sotrydniki")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0793b66df27d16d6e18917cae05ca2fca2af7719")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+60fdaa482be781b7e0dc6ebe189d189060aca9d2")]
 [assembly: System.Reflection.AssemblyProductAttribute("Sotrydniki")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Sotrydniki")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

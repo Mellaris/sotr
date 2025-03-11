@@ -1,0 +1,148 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="900" d:DesignHeight="950"
+        x:Class="Sotrydniki.Edit"
+		x:CompileBindings="False"
+        Title="Edit">
+	<Window.Styles>
+		<Style Selector="TextBox">
+			<Setter Property="VerticalAlignment" Value="Top"/>
+		</Style>
+		<Style Selector="ComboBox">
+			<Setter Property="HorizontalAlignment" Value="Stretch"/>
+		</Style>
+		<Style Selector="TextBlock">
+			<Setter Property="VerticalAlignment" Value="Bottom"/>
+		</Style>
+	</Window.Styles>
+	<Grid ColumnDefinitions="*,10*,*,10*,*" Background="LightGray" RowDefinitions="*,20*,*">
+		<Border Grid.Column="1" Grid.Row="1" Background="White" >
+			<DockPanel>
+				<Grid DockPanel.Dock="Bottom" ColumnDefinitions="*,10*,*" RowDefinitions="*,*,*" >
+					<TextBlock Grid.Column="1" Grid.Row="2"/>
+					<StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal">
+						<Button Click="Redact" Content="Редактировать" Name="RedactB" IsEnabled="True"/>
+						<Button Content="Готово" IsEnabled="False" Name="ReadyB"/>
+					</StackPanel>
+				</Grid>
+				<Grid Name="StaffGrid" IsEnabled="False" DockPanel.Dock="Top" RowDefinitions="*,*,*,*,*,*,*,*,*,*,*,*,*" ColumnDefinitions="*,10*,*">
+					<TextBlock Grid.Column="1" Grid.Row="0" Text="ФИО сотрудника"/>
+					<Grid Grid.Column="1" Grid.Row="1" ColumnDefinitions="*,*,*">
+						
+						<TextBox Grid.Column="0" Name="Name" Watermark="Имя"/>
+						
+					</Grid>
+					<TextBlock Grid.Column="1" Grid.Row="2" Text="Дата рождения"/>
+					<DatePicker Grid.Column="1" Grid.Row="3" Name="BDay"/>
+					<TextBlock Grid.Column="1" Grid.Row="4" Text="Контактные данные"/>
+					<Grid ColumnDefinitions="*,*,*" Grid.Column="1" Grid.Row="5">
+						<TextBox Grid.Column="0" Watermark="Телефон" Name="Phone"/>
+						<TextBox Grid.Column="1" Watermark="Email" Grid.ColumnSpan="2" Name="Email"/>
+					</Grid>
+					<TextBlock Grid.Column="1" Grid.Row="6" Text="Департамент"/>
+					<ComboBox Grid.Column="1" Grid.Row="7" Name="DepartamentCB">
+						<ComboBox.ItemTemplate>
+							<DataTemplate>
+								<TextBlock Text="{Binding Name}"/>
+							</DataTemplate>
+						</ComboBox.ItemTemplate>
+					</ComboBox>
+					<TextBlock Grid.Column="1" Grid.Row="8" Text="Должность"/>
+					<ComboBox Grid.Column="1" Grid.Row="9" Name="PositionCB">
+						<ComboBox.ItemTemplate>
+							<DataTemplate>
+								<TextBlock Text="{Binding Name}"/>
+							</DataTemplate>
+						</ComboBox.ItemTemplate>
+					</ComboBox>
+					<TextBlock Grid.Column="1" Grid.Row="10" Text="Кабинет"/>
+					<ComboBox Grid.Column="1" Grid.Row="11" Name="CaninetCB">
+						<ComboBox.ItemTemplate>
+							<DataTemplate>
+								<TextBlock Text="{Binding Office}"/>
+							</DataTemplate>
+						</ComboBox.ItemTemplate>
+					</ComboBox>
+				</Grid>
+			</DockPanel>
+
+		</Border>
+		<Border Grid.Column="3" Grid.Row="1" Background="White">
+			<DockPanel>
+				<TabControl SelectedIndex="0" Name="Tab" DockPanel.Dock="Top">
+					<TabItem Header="Прошедшие">
+
+					</TabItem>
+					<TabItem Header="Текущие">
+
+					</TabItem>
+					<TabItem Header="Будущие">
+
+					</TabItem>
+
+				</TabControl>
+				<Grid Margin="20,0" DockPanel.Dock="Top" RowDefinitions="*,*,*,*,*,*,*,7*">
+					<TextBlock Grid.Row="0" Text="Обучения"/>
+					<ListBox Name="lessonsLB" Grid.Row="1">
+						<ListBox.ItemsPanel>
+							<ItemsPanelTemplate>
+								<VirtualizingStackPanel Orientation="Horizontal" />
+							</ItemsPanelTemplate>
+						</ListBox.ItemsPanel>
+						<ListBox.ItemTemplate>
+							<DataTemplate>
+								<TextBlock Text="{Binding Day}"/>
+							</DataTemplate>
+						</ListBox.ItemTemplate>
+					</ListBox>
+					<TextBlock Grid.Row="2" Text="Отгулы"/>
+					<ListBox Name="TimeOff" Grid.Row="3">
+						<ListBox.ItemsPanel>
+							<ItemsPanelTemplate>
+								<VirtualizingStackPanel Orientation="Horizontal" />
+							</ItemsPanelTemplate>
+						</ListBox.ItemsPanel>
+						<ListBox.ItemTemplate>
+							<DataTemplate>
+								<TextBlock Text="{Binding Day}"/>
+							</DataTemplate>
+						</ListBox.ItemTemplate>
+					</ListBox>
+					<TextBlock Grid.Row="4" Text="Отпуска"/>
+					<ListBox Name="Vacations" Grid.Row="5">
+						<ListBox.ItemsPanel>
+							<ItemsPanelTemplate>
+								<VirtualizingStackPanel Orientation="Horizontal" />
+							</ItemsPanelTemplate>
+						</ListBox.ItemsPanel>
+						<ListBox.ItemTemplate>
+							<DataTemplate>
+								<TextBlock Text="{Binding Day}"/>
+							</DataTemplate>
+						</ListBox.ItemTemplate>
+					</ListBox>
+					<DockPanel Grid.Row="7">
+						<StackPanel DockPanel.Dock="Top"  Orientation="Horizontal" Spacing="10">
+							<RadioButton GroupName="First Group" Content="Присутствовал"/>
+							<RadioButton GroupName="First Group" Content="Неполный рабочий день"/>
+							<RadioButton GroupName="First Group" Content="Отгул"/>
+							<RadioButton GroupName="First Group" Content="Отпуск"/>
+
+						</StackPanel>
+						<StackPanel DockPanel.Dock="Top"  Orientation="Horizontal" Spacing="10">
+							<RadioButton GroupName="First Group" Content="Нерабочий день"/>
+							<RadioButton GroupName="First Group" Content="Прогул"/>
+							<RadioButton GroupName="First Group" Content="Обучение"/>
+						</StackPanel>
+						<Calendar DockPanel.Dock="Top" />
+						<Button Content="Добавить посещение"/>
+					</DockPanel>
+				</Grid>
+			</DockPanel>
+
+
+		</Border>
+	</Grid>
+</Window>

@@ -11,7 +11,7 @@ public partial class Employee
 
     public string? Mobilephone { get; set; }
 
-    public DateOnly? Birthdate { get; set; }
+    public DateOnly Birthdate { get; set; }
 
     public string Workphone { get; set; } = null!;
 

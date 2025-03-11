@@ -2,14 +2,19 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="1200" d:DesignHeight="490"
+        mc:Ignorable="d" d:DesignWidth="1200" d:DesignHeight="590"
         x:Class="Sotrydniki.MainWindow"
 		x:CompileBindings="False"
-		Width="1200" Height="490"
+		Width="1200" Height="590"
         Title="Sotrydniki">
 	<StackPanel>
-		<TextBlock Margin="0,10,0,0" FontSize="24" HorizontalAlignment="Center">Список сотрудников</TextBlock>
-		<StackPanel Orientation="Horizontal">
+		<StackPanel Orientation="Horizontal" Background="LightGreen" DockPanel.Dock="Top" >
+			<Ellipse Margin="30,0,0,0" Fill="Green" Width="20" Height="20"/>
+			<Border Margin="40,10,0,10" CornerRadius="10" Width="450"  Background="White" BorderBrush="White">
+				<TextBlock Margin="10" Text="Организационная структура "/>
+			</Border>
+		</StackPanel>
+		<StackPanel Margin="0,30,0,0" Orientation="Horizontal">
 			<StackPanel Width="550">
 				<ListBox SelectionChanged="ListBox_SelectionChanged" Name="ListBoxdDol" Margin="0,20,0,0" Width="520" Height="350">
 					<ListBox.ItemTemplate>
@@ -23,35 +28,42 @@
 				<ListBox Name="ListBoxSort" Margin="0,20,0,0" Width="630" Height="350">
 					<ListBox.ItemTemplate>
 						<DataTemplate>
-							<StackPanel>
-								<StackPanel Orientation="Horizontal">
-									<ListBox ItemsSource="{Binding Departments}">
-										<ListBox.ItemTemplate>
-											<DataTemplate>
-												<TextBlock Text="{Binding Name}"></TextBlock>
-											</DataTemplate>
-										</ListBox.ItemTemplate>
-									</ListBox>
-									<ListBox ItemsSource="{Binding Positions}">
-										<ListBox.ItemTemplate>
-											<DataTemplate>
-												<TextBlock Text="{Binding Name}"></TextBlock>
-											</DataTemplate>
-										</ListBox.ItemTemplate>
-									</ListBox>
+							<Border DoubleTapped="Border_DoubleTapped" Tag="{Binding Id}" Background="White">
+								<StackPanel>
+									<StackPanel Orientation="Horizontal">
+										<ListBox Background="White" ItemsSource="{Binding Departments}">
+											<ListBox.ItemTemplate>
+												<DataTemplate>
+													<TextBlock Text="{Binding Name}"></TextBlock>
+												</DataTemplate>
+											</ListBox.ItemTemplate>
+										</ListBox>
+										<ListBox Background="White" ItemsSource="{Binding Positions}">
+											<ListBox.ItemTemplate>
+												<DataTemplate>
+													<TextBlock Text="{Binding Name}"></TextBlock>
+												</DataTemplate>
+											</ListBox.ItemTemplate>
+										</ListBox>
+									</StackPanel>
+									<TextBlock Text="{Binding Name}"></TextBlock>
+									<StackPanel Orientation="Horizontal">
+										<TextBlock Text="{Binding Workphone}" Margin="10,10,0,0"></TextBlock>
+										<TextBlock Text="{Binding Email}" Margin="10,10,0,0"></TextBlock>
+									</StackPanel>
+									<TextBlock Text="{Binding Office}"></TextBlock>
 								</StackPanel>
-								<TextBlock Text="{Binding Name}"></TextBlock>
-								<StackPanel Orientation="Horizontal">
-									<TextBlock Text="{Binding Workphone}" Margin="10,10,0,0"></TextBlock>
-									<TextBlock Text="{Binding Email}" Margin="10,10,0,0"></TextBlock>
-								</StackPanel>
-								<TextBlock Text="{Binding Office}"></TextBlock>
-							</StackPanel>
+							</Border>
+							
 						</DataTemplate>
 					</ListBox.ItemTemplate>
 				</ListBox>
 			</StackPanel>
 		</StackPanel>
-		<Button Margin="0,20,60,0" HorizontalAlignment="Right">Добавить</Button>
+		<Button Background="LightGreen" Margin="10" HorizontalAlignment="Right" VerticalAlignment="Bottom" CornerRadius="10" FontSize="20" >
+			<Border Background="LightGreen" CornerRadius="10" BorderThickness="3">
+				<TextBlock Text="+" Margin="10"/>
+			</Border>
+		</Button>
 	</StackPanel>
 </Window>

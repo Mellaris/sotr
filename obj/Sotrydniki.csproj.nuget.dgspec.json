@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Class_Student\\Desktop\\Sotrydniki\\Sotrydniki.csproj": {}
+    "C:\\Users\\prdb\\Desktop\\project\\sotr\\Sotrydniki.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Class_Student\\Desktop\\Sotrydniki\\Sotrydniki.csproj": {
+    "C:\\Users\\prdb\\Desktop\\project\\sotr\\Sotrydniki.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Class_Student\\Desktop\\Sotrydniki\\Sotrydniki.csproj",
+        "projectUniqueName": "C:\\Users\\prdb\\Desktop\\project\\sotr\\Sotrydniki.csproj",
         "projectName": "Sotrydniki",
-        "projectPath": "C:\\Users\\Class_Student\\Desktop\\Sotrydniki\\Sotrydniki.csproj",
-        "packagesPath": "C:\\Users\\Class_Student\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Class_Student\\Desktop\\Sotrydniki\\obj\\",
+        "projectPath": "C:\\Users\\prdb\\Desktop\\project\\sotr\\Sotrydniki.csproj",
+        "packagesPath": "C:\\Users\\prdb\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\prdb\\Desktop\\project\\sotr\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Class_Student\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\prdb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -92,7 +96,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
